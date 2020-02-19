@@ -1,0 +1,17 @@
+{
+  "name": "codeceptjs-selenium-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@wdio/selenium-standalone-service": "5.16.10",
+    "codeceptjs": "2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
