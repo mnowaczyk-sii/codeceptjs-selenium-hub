@@ -40,7 +40,15 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/mochawesome-report/', fingerprint: true
+            archiveArtifacts artifacts: 'reports/mochawesome-report/**/*', fingerprint: true
+            publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: './reports/mochawesome-report',
+            reportFiles: 'mochawesome.html',
+            reportName: 'Test results'
+          ]
         }
     }
 }
