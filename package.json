@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test-chrome": "env BROWSER=chrome codeceptjs run -c ./codecept.conf.js",
-    "test-firefox": "env BROWSER=firefox codeceptjs run -c ./codecept.conf.js"
+    "test-chrome": "env BROWSER=chrome codeceptjs run -c ./codecept.conf.js  --reporter mochawesome",
+    "test-firefox": "env BROWSER=firefox codeceptjs run -c ./codecept.conf.js  --reporter mochawesome"
   },
   "dependencies": {
     "@wdio/selenium-standalone-service": "5.16.10",
-    "codeceptjs": "2.5.0"
+    "codeceptjs": "2.5.0",
+    "mochawesome": "4.1.0"
   },
   "devDependencies": {},
   "keywords": [],

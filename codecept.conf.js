@@ -14,13 +14,20 @@ exports.config = {
       browser: process.env.BROWSER || "chrome",
       rootElement: "body",
       angular: true
+    },
+    Mochawesome: {
+      uniqueScreenshotNames: true
     }
   },
   include: {
     I: "./steps_file.js"
   },
   bootstrap: null,
-  mocha: {},
+  mocha: {
+    reporterOptions: {
+      reportDir: "reports/mochawesome-report"
+    }
+  },
   name: "codeceptjs-selenium-hub",
   plugins: {
     wdio: {
